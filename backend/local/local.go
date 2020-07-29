@@ -149,9 +149,9 @@ cause disk fragmentation and can be slow to work with.`,
 			Help: `Disable setting modtime
 Normally rclone updates modification time of files after they are done
 uploading. This can cause permissions issues on Linux platforms when 
-rclone is copying to a CIFS mount where the user rclone is running as
-does not own the file uploaded. If this option is enabled, rclone will
-no longer update the modtime after copying a file.`,
+the user rclone is running as does not own the file uploaded, such as
+when copying to a CIFS mount owned by another user. If this option is 
+enabled, rclone will no longer update the modtime after copying a file.`,
 			Default:  false,
 			Advanced: true,
 		}, {
